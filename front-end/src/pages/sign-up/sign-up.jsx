@@ -3,13 +3,13 @@ import 'pages/sign-up/sign-up.css';
 import Form from 'components/sign-up/form/form';
 
 
-function Register() {
+function SignUp() {
   return (
-    <div className='register'>
+    <div className='sign-up'>
       <h2>Sign up</h2>
       <Form></Form>
     </div>
   );
 }
 
-export default Register;
+export default SignUp;

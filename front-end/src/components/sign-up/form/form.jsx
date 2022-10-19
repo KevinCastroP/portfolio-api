@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { alertInvalidInfo, alertActionSuccess } from 'components/alerts/alerts';
+import { alertInvalidInfo, alertActionSuccess } from 'utilities/alerts/alerts';
 import { useLocation } from 'wouter';
 
 function Form() {

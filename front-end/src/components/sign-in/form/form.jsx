@@ -1,10 +1,12 @@
-import React, { useRef } from 'react';
-import { alertInvalidInfo, alertActionSuccess } from 'components/alerts/alerts';
+import React, { useRef, useContext } from 'react';
+import { alertInvalidInfo, alertActionSuccess } from 'utilities/alerts/alerts';
 import { Link } from 'wouter';
+import { SesionContext } from 'context/sesion-context';
 import 'components/sign-in/form/form.css';
 
 function Form() {
 
+  const { updateSesion } = useContext(SesionContext);
   const userNameRef = useRef();
   const passwordRef = useRef();
   const rememberMeRef = useRef();
@@ -35,11 +37,12 @@ function Form() {
     let userName = userNameRef.current;
     let password = passwordRef.current;
     let rememberMe = rememberMeRef.current;
-    if (formValidation(userName, password)) {
+    if (formValidation(userName.value, password.value)) {
       alertActionSuccess('Sign in success');
       console.log(userName.value);
       console.log(password.value);
       console.log(rememberMe.checked);
+      updateSesion(userName.value);
       userName.value = '';
       password.value = '';
       rememberMe.checked = false;
