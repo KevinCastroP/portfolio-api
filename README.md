@@ -14,5 +14,6 @@ Portfolio API
 * [Contact](https://kevincastrop.github.io/KC)
 
 **Francisco Parra**
+* [Email](https://francisco.parra.penagos@gmail.com)
 
 **Sebastian Murillas**
