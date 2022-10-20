@@ -42,7 +42,7 @@ function Form() {
       console.log(userName.value);
       console.log(password.value);
       console.log(rememberMe.checked);
-      updateSesion(userName.value);
+      updateSesion({ newUserName: userName.value });
       userName.value = '';
       password.value = '';
       rememberMe.checked = false;

@@ -8,7 +8,7 @@ function SesionContextProvider({ children }) {
     userName: 'dafault-user-name',
   });
 
-  const updateSesion = (newUserName = 'dafault-user-name') => {
+  const updateSesion = ({ newUserName = sesion.userName }) => {
     setSesion({
       userName: newUserName
     });
