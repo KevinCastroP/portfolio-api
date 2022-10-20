@@ -5,7 +5,8 @@ function alertInvalidInfo(text = 'Invalid info') {
     icon: 'warning',
     title: text,
     confirmButtonColor: '#08f',
-    iconColor: '#c10'
+    iconColor: '#c10',
+    timer: 3000,
   });
 }
 
@@ -14,7 +15,7 @@ function alertActionSuccess(text = 'Action success') {
     icon: 'success',
     title: text,
     confirmButtonColor: '#08f',
-    timer: 3000
+    timer: 3000,
   });
 }
 
