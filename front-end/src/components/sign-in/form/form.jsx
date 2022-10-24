@@ -51,7 +51,7 @@ function Form() {
 
   return (
     <form onSubmit={onSubmitForm}>
-      <input type="email" className='input-form' placeholder='Email address' ref={userNameRef} autoComplete='username' onInvalid={alertInvalidEmail} />
+      <input type="email" className='input-form' placeholder='Username' ref={userNameRef} autoComplete='username' onInvalid={alertInvalidEmail} />
       <input type="password" className='input-form' placeholder='Password' ref={passwordRef} autoComplete='current-password' />
       <div className='sign-in-options'>
         <div className="remember-me">
