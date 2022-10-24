@@ -102,9 +102,6 @@ input[type="checkbox"] {
   }
 }
 
-@media screen and (max-width:1920px) and (max-height:1080px),
-(orientation:landscape) {}
-
 @media screen and (max-width:720px) and (max-height:1280px),
 (orientation:portrait) {
   .sign-in form {
@@ -112,12 +109,21 @@ input[type="checkbox"] {
   }
 
   .sign-in label {
+    color: #666;
     font-size: 28px;
   }
 
   .input-form {
     font-size: 22px;
     padding: 20px;
+  }
+
+  .input-form {
+    border: 1px solid #666;
+  }
+
+  .input-form::placeholder {
+    color: #666;
   }
 
   .sign-in-options {
