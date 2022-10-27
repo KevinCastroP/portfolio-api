@@ -1,0 +1,47 @@
+.sign-up {
+  margin-top: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  width: 30vw;
+  padding: 20px 0;
+  background: var(--bg-content);
+}
+
+.sign-up h2 {
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.sign-up form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  width: 80%;
+}
+
+@media screen and (min-width:1440px) and (min-height:900px) and (orientation:landscape) {
+  .sign-up h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width:720px) and (max-height:1280px),
+(orientation:portrait) {
+  .sign-up {
+    border-radius: 0;
+    width: 95%;
+    height: 95%;
+    justify-content: center;
+    background: none;
+    row-gap: 8vh;
+  }
+
+  .sign-up h2 {
+    font-size: 50px;
+  }
+}

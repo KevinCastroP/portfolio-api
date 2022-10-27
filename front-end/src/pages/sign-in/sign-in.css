@@ -1,0 +1,99 @@
+.sign-in {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+  height: 65%;
+  background: var(--bg-content);
+}
+
+.sign-in h2 {
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.sign-in h3 {
+  text-align: center;
+  color: #555;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sign-in-with {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sign-in-with button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: fit-content;
+  padding: 5px;
+  border: 1px solid var(--inputs-color);
+  background: none;
+  border-radius: 10px;
+}
+
+.sign-in-with button:active {
+  background: #eee;
+}
+
+.sign-in-with img {
+  height: 100%;
+}
+
+@media screen and (min-width:1440px) and (min-height:900px) and (orientation:landscape) {
+  .sign-in h2 {
+    font-size: 40px;
+  }
+
+  .sign-in h3 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:720px) and (max-height:1280px),
+(orientation:portrait) {
+  .sign-in {
+    border-radius: 0;
+    width: 95%;
+    height: 95%;
+    justify-content: center;
+    background: none;
+    row-gap: 8vh;
+  }
+
+  .sign-in h2 {
+    font-size: 50px;
+  }
+
+  .sign-in h3 {
+    font-size: 40px;
+  }
+
+  .sign-in-with button {
+    height: 150%;
+  }
+}
+
+@media screen and (max-width:375px) and (max-height:667px),
+(orientation:portrait) {
+  .sign-in {
+    row-gap: 35px;
+  }
+
+  .sign-in h2 {
+    font-size: 45px;
+  }
+
+  .sign-in h3 {
+    font-size: 35px;
+  }
+}
