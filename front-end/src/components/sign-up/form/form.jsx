@@ -19,11 +19,11 @@ function Form() {
   //form validation
   const formValidation = (email = '', userName = '', password = '', confirmPassword = '') => {
     if (email == '') {
-      alertInvalidInfo('Please enter a email');
+      alertInvalidInfo('Please enter an email');
       return false;
     }
     if (userName == '') {
-      alertInvalidInfo('Please enter a username');
+      alertInvalidInfo('Please enter an username');
       return false;
     }
     if (password == '') {
@@ -31,7 +31,7 @@ function Form() {
       return false;
     }
     if (password !== confirmPassword) {
-      alertInvalidInfo('Passwords do not match');
+      alertInvalidInfo("Passwords don't match");
       return false;
     }
     return true;
