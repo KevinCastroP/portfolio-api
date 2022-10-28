@@ -17,7 +17,7 @@ function SignIn() {
     <div className='sign-in'>
       <h2>Sign In Here</h2>
       <Form />
-      <Link href='/sign_up'><a>do not have an account? sign up</a></Link>
+      <Link href='/sesion/sign_up'><a>do not have an account? sign up</a></Link>
       <h3>Or continue with</h3>
       <div className="sign-in-with">
         <button onClick={signInWithAnotherOption}><img src={facebook} alt="facebook-icon" /></button>

@@ -54,7 +54,7 @@ function Form() {
       userName.value = '';
       password.value = '';
       confirmPassword.value = '';
-      setPath('/sign_in');
+      setPath('/sesion/sign_in');
     }
   };
 

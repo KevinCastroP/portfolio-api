@@ -1,0 +1,23 @@
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-header-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  column-gap: 10px;
+  row-gap: 15px;
+  width: 40%;
+}
+
+.profile-header-buttons:nth-child(1) {
+  justify-content: flex-start;
+}
+
+.profile-header-buttons:nth-child(3) {
+  justify-content: flex-end;
+}

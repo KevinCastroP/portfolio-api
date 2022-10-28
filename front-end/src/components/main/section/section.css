@@ -1,0 +1,43 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 6px;
+  background: var(--section-color);
+  box-shadow: 3px 3px 3px 1px var(--section-shadow);
+  padding: 10px;
+}
+
+.section-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  width: 20px;
+  top: 10px;
+  right: -18px;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.section-options:hover {
+  row-gap: 8px;
+}
+
+.section-options div {
+  width: 4px;
+  height: 4px;
+  background: #777;
+  border-radius: 50%;
+}
+
+.section-options-deploy {
+  padding: 6px;
+  background: #fff;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  right: -50px;
+  border-radius: 5px;
+}
