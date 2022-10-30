@@ -1,5 +1,5 @@
 import React, { useRef, useContext } from 'react';
-import { alertInvalidInfo, alertActionSuccess } from 'utilities/alerts/alerts';
+import { alertInvalidInfo, alertActionSuccess } from 'utilities/alerts';
 import { Link } from 'wouter';
 import { SesionContext } from 'context/sesion-context';
 import 'components/sign-in/form/form.css';

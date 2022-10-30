@@ -1,8 +1,6 @@
 .section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  height: 400px;
   border-radius: 6px;
   background: var(--section-color);
   box-shadow: 3px 3px 3px 1px var(--section-shadow);

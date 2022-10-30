@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './profile-header.css';
 import Profile from 'components/main/profile/profile';
-import ButtonHeader from '../button-header/button-header';
+import ButtonHeader from '../button/button';
 
 function ProfileHeader() {
 

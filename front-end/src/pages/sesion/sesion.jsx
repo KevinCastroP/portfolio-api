@@ -10,7 +10,6 @@ function Sesion() {
   return (
     <div className='sesion'>
       <SesionContextProvider>
-
         <Route path='/sesion/sign_in' component={SignIn} />
         <Route path='/sesion/sign_up' component={SignUp} />
       </SesionContextProvider>

@@ -1,10 +1,7 @@
 .button-header {
-  width: 30%;
-}
-
-.button-header button {
+  position: absolute;
   user-select: none;
-  width: 100%;
+  width: 150px;
   padding: 5px 0;
   background: #777;
   color: #fefefe;
@@ -13,6 +10,6 @@
   outline: 1px solid #000;
 }
 
-.button-header button:active {
-  background: #555;
+.button-header:active {
+  background: #ccc;
 }
