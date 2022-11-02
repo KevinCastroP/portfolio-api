@@ -1,20 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import './button.css';
-import { moveElement } from 'utilities/move-element';
+import { useMove } from 'hooks/useMove';
 
 function Button({ text }) {
 
   const buttonRef = useRef();
 
-  useEffect(() => {
-    buttonRef.current.onmousedown = (evt) => {
-      moveElement(evt, (target, x, y, succes) => console.log(x + ', ' + y + ' ' + succes));
-    };
-  }, []);
-
+  useMove(buttonRef, (element) => console.log(element));
 
   return (
-    <button ref={buttonRef} onDragStart={() => { return false; }} className='button-header'>{text}</button>
+    <button ref={buttonRef} className='button-header'>{text}</button>
   );
 }
 

@@ -8,10 +8,9 @@ function EditorMode() {
   return (
     <div className='editor-mode'>
       <Section>
-        <Button text='boton de prueba' />
-        <Button text='boton de prueba' />
-        <Button text='boton de prueba' />
-
+        <Button text='boton de prueba 1' />
+        <Button text='boton de prueba 2' />
+        <Button text='boton de prueba 3' />
       </Section>
     </div>
   );
