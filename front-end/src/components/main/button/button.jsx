@@ -6,7 +6,7 @@ function Button({ text }) {
 
   const buttonRef = useRef();
 
-  useMove(buttonRef, (element) => console.log(element));
+  useMove(buttonRef, (element) => { });
 
   return (
     <button ref={buttonRef} className='button-header'>{text}</button>

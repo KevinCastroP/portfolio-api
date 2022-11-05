@@ -1,25 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './section.css';
+import SectionOptions from '../section-options/section-options';
 
 function Section({ children }) {
 
-  const [menu, setMenu] = useState(false);
-
   return (
     <section className='section'>
-
       {children}
-
-      <div className='section-options-deploy' hidden={!menu} onMouseLeave={() => setMenu(!menu)}>
-        <p>options</p>
-      </div>
-
-      <div className='section-options' onClick={() => setMenu(!menu)}>
-        <div hidden={menu}></div>
-        <div hidden={menu}></div>
-        <div hidden={menu}></div>
-      </div>
-
+      <SectionOptions />
     </section>
   );
 }

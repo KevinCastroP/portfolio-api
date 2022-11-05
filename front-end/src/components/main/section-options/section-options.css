@@ -1,0 +1,85 @@
+.section-options-points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  width: 20px;
+  top: 10px;
+  right: -18px;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.section-options-points:hover {
+  row-gap: 8px;
+}
+
+.section-options-points div {
+  width: 4px;
+  height: 4px;
+  background: #777;
+  border-radius: 50%;
+}
+
+.section-options-content {
+  z-index: 100000;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  right: -50px;
+  border-radius: 5px;
+}
+
+.section-options-content .sketch-picker {
+  box-shadow: none !important;
+}
+
+.section-options p,
+.section-options label {
+  user-select: none;
+}
+
+.border-radius-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.border-radius-container input[type="range"] {
+  width: 80%;
+}
+
+.custom-input-file-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.custom-input-file {
+  position: relative;
+  background: #d9d9d9;
+  border: 1px solid #b1b1b1;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+}
+
+.custom-input-file:active {
+  background: #ccc;
+}
+
+.custom-input-file::before {
+  content: 'or upload a background';
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.input-file {
+  background: green;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
