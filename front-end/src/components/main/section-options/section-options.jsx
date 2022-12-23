@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './section-options.css';
 import { SketchPicker } from 'react-color';
 
-function SectionOptions() {
+function SectionOptions({ setUrl }) {
 
   const sectionOptionsRef = useRef();
   const [menu, setMenu] = useState(false);
@@ -17,21 +17,22 @@ function SectionOptions() {
   const onColorChange = (evt) => {
     const newColor = evt.rgb;
     setColor(newColor);
-    sectionOptionsRef.current.parentNode.style.background = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
+    sectionOptionsRef.current.parentNode.style.background = `rgba(${newColor.r}, ${newColor.g}, ${newColor.b}, ${newColor.a})`;
   };
 
   const onSubmitBackground = (evt) => {
     const file = evt.target.files[0];
     const reader = new FileReader();
     reader.addEventListener("load", function () {
-      sectionOptionsRef.current.parentNode.style.background = `url(${reader.result})`;
+      setUrl(reader.result);
     });
-    reader.readAsDataURL(file);
+    if (file) {
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
     <div className='section-options' ref={sectionOptionsRef}>
-
       <div className='section-options-content' hidden={!menu} onMouseLeave={() => setMenu(!menu)}>
         <p>border radius</p>
         <div className='border-radius-container'>
@@ -46,7 +47,6 @@ function SectionOptions() {
           </div>
         </div>
       </div>
-
       <div className='section-options-points' onClick={() => setMenu(!menu)}>
         <div hidden={menu}></div>
         <div hidden={menu}></div>

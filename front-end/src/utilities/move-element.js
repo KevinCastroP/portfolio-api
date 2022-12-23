@@ -20,13 +20,17 @@ function moveElement(evt, callback) {
 
   //is the last function that is called
   function endFunction(x, y) {
+    const finalX = x - shiftX - parentValues.left;
+    const finalY = y - shiftY - parentValues.top;
     document.removeEventListener('mousemove', onMouseMove);
     parent.append(target);
     targetStyle.boxShadow = 'none';
     targetStyle.zIndex = 1;
     target.onmouseup = null;
-    moveElementAt(x, y);
-    callback({ element: target, x: targetStyle.top, y: targetStyle.left });
+    window.oncontextmenu = null;
+    targetStyle.left = finalX / parent.offsetWidth * 100 + '%';
+    targetStyle.top = finalY / parent.offsetHeight * 100 + '%';
+    callback({ element: target, x: targetStyle.left, y: targetStyle.top });
   }
 
   //moves the element to the mouse position, in case the element leaves the section it sends it to the center
@@ -38,7 +42,7 @@ function moveElement(evt, callback) {
       left: target.getBoundingClientRect().left,
     };
     if (targetValues.top < parentValues.top || targetValues.bottom > parentValues.bottom || targetValues.left < parentValues.left || targetValues.right > parentValues.right) {
-      endFunction(parentValues.right / 2 - target.offsetWidth / 2, parentValues.bottom / 2 - target.offsetHeight / 2);
+      endFunction(Math.round(parentValues.right / 2), Math.round(parentValues.bottom / 2));
     } else {
       moveElementAt(evt.pageX, evt.pageY);
     }
@@ -51,8 +55,9 @@ function moveElement(evt, callback) {
 
   document.addEventListener('mousemove', onMouseMove);
   target.onmouseup = function (evt) {
-    endFunction(evt.pageX - parentValues.left, evt.pageY - parentValues.top);
+    endFunction(evt.pageX, evt.pageY);
   };
+
 }
 
 export { moveElement };
